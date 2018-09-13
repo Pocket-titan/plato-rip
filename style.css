@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500|Noto+Serif');
+
+/* custom css for your pdf */
+
+body {
+  background: #fff !important;
+  color: #000;
+}
+
+h1 {
+  font-size: 24pt;
+}
+
+h2, h3, h4 {
+  font-size: 14pt;
+  margin-top: 25px;
+}
+
+/* page breaks */
+
+a {
+  page-break-inside: avoid
+}
+
+blockquote {
+  page-break-inside: avoid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+  page-break-inside: avoid
+}
+
+img {
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+table, pre {
+  page-break-inside: avoid
+}
+
+ul, ol, dl {
+  page-break-before: avoid
+}
+
+a {
+  page-break-inside: avoid
+}
+
+a[href^=http]:after {
+  content: " <" attr(href) "> ";
+}
+
+$a:after>img {
+  content: "";
+}
+
+article a[href^="#"]:after {
+  content: "";
+}
+
+a:not(:local-link):after {
+  content: " <" attr(href) "> ";
+}
+
+/* this matters */
+
+a:link, a:visited, a {
+  background: transparent;
+  color: #520;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: left;
+}
+
+p, address, li, dt, dd, blockquote {
+  font-size: 100%
+}
+
+ul, ol {
+  list-style: inside;
+  list-style-image: url('https://plato.stanford.edu/symbols/list-bullet.png');
+  margin-left: -10pt;
+  margin-bottom: 20pt;
+}
+
+li {
+  line-height: 1.6em;
+}
+
+body, p {
+  font-family: 'Noto Serif', sans-serif;
+  font-size: 13px;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+html {
+  line-height: 1.7 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+blockquote {
+  font-style: italic;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
