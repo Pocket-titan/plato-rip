@@ -123,7 +123,7 @@ const htmlToPdf = (html, filename) => {
 		html,
 		options
 	).toFile(
-		`./${filename}.pdf`,
+		`./output/${filename}.pdf`,
 		(err, res) => {
 			if (err) {
 				return console.error('Error creating pdf file', err)
